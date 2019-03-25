@@ -1,0 +1,25 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/features/homepage_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/features/infra_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1553527122
+  }
+}
