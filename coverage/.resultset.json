@@ -19,13 +19,6 @@
         null,
         null
       ],
-      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/lib/bookmark_list.rb": [
-        1,
-        1,
-        4,
-        null,
-        null
-      ],
       "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/features/homepage_spec.rb": [
         1,
         null,
@@ -58,6 +51,6 @@
         null
       ]
     },
-    "timestamp": 1553532589
+    "timestamp": 1553533754
   }
 }
