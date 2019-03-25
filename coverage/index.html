@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Bookmark manager</title>
+    <title>Code coverage for Bookmarks manager</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-25T16:25:36+00:00">2019-03-25T16:25:36+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-25T16:49:49+00:00">2019-03-25T16:49:49+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.05
+         1.14
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>22</b> relevant lines. 
-    <span class="green"><b>22</b> lines covered</span> and
+    <b>28</b> relevant lines. 
+    <span class="green"><b>28</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,27 +51,27 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#1606a7e54c6d04d1122d810cabaab719238cb1bc" class="src_link" title="lib/bookmark_list.rb">lib/bookmark_list.rb</a></td>
+        <td class="strong"><a href="#0eeda7a3a5b6378a84db74002a6fb981d356286d" class="src_link" title="lib/bookmark_list.rb">lib/bookmark_list.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#d552f6dedac41944ab29db9478482a637710637f" class="src_link" title="spec/bookmark_list_spec.rb">spec/bookmark_list_spec.rb</a></td>
+        <td class="strong"><a href="#0e6caff65f6d0558054fced5b77282c45e3e5500" class="src_link" title="spec/bookmark_list_spec.rb">spec/bookmark_list_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>6</td>
-        <td>6</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#608f374f7a27c035216a4ae1f31da07031c42a43" class="src_link" title="spec/features/homepage_spec.rb">spec/features/homepage_spec.rb</a></td>
+        <td class="strong"><a href="#967278e7e345fd035e07771d2a117e012ca6a16e" class="src_link" title="spec/features/homepage_spec.rb">spec/features/homepage_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>14</td>
         <td>8</td>
@@ -81,11 +81,11 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#7b5f57f756e0ce9b7d9ca9db2bd6078487edd869" class="src_link" title="spec/features/view_bookmarks_spec.rb">spec/features/view_bookmarks_spec.rb</a></td>
+        <td class="strong"><a href="#cdf6c820993a47ac175697d23a55bd88249248c7" class="src_link" title="spec/features/view_bookmarks_spec.rb">spec/features/view_bookmarks_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>13</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -106,7 +106,7 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="1606a7e54c6d04d1122d810cabaab719238cb1bc">
+        <div class="source_table" id="0eeda7a3a5b6378a84db74002a6fb981d356286d">
   <div class="header">
     <h3>lib/bookmark_list.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -132,10 +132,10 @@
           <code class="ruby">  def view_all</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
           
-          <code class="ruby">    []</code>
+          <code class="ruby">    [&quot;www.google.com&quot;, &quot;www.facebook.com&quot;]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -155,13 +155,13 @@
 </div>
 
       
-        <div class="source_table" id="d552f6dedac41944ab29db9478482a637710637f">
+        <div class="source_table" id="0e6caff65f6d0558054fced5b77282c45e3e5500">
   <div class="header">
     <h3>spec/bookmark_list_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -208,7 +208,7 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;returns list of bookmarks&quot; do</code>
+          <code class="ruby">    it &quot;returns an array&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
@@ -226,10 +226,40 @@
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns saved bookmarks&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.view_all).to eq [&quot;www.google.com&quot;, &quot;www.facebook.com&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
@@ -240,7 +270,7 @@
 </div>
 
       
-        <div class="source_table" id="608f374f7a27c035216a4ae1f31da07031c42a43">
+        <div class="source_table" id="967278e7e345fd035e07771d2a117e012ca6a16e">
   <div class="header">
     <h3>spec/features/homepage_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -343,13 +373,13 @@
 </div>
 
       
-        <div class="source_table" id="7b5f57f756e0ce9b7d9ca9db2bd6078487edd869">
+        <div class="source_table" id="cdf6c820993a47ac175697d23a55bd88249248c7">
   <div class="header">
     <h3>spec/features/view_bookmarks_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -366,7 +396,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &quot;displays list of bookmarks&quot; do</code>
+          <code class="ruby">  scenario &quot;displays heading&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -394,6 +424,42 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &quot;displays list of bookmarks&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit(&quot;/&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &quot;View Bookmarks&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;www.google.com&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
