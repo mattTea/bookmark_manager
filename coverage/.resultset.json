@@ -1,25 +1,20 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/bookmark_list_spec.rb": [
+      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/bookmark_list_spec.rb": [
         1,
         null,
         1,
-        2,
-        null,
         1,
         1,
         1,
-        null,
-        null,
         1,
         1,
-        null,
         null,
         null,
         null
       ],
-      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/features/homepage_spec.rb": [
+      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/homepage_spec.rb": [
         1,
         null,
         1,
@@ -35,7 +30,7 @@
         null,
         null
       ],
-      "/Users/arthurashman/Projects/MakersAcademy/week-4/bookmarks_manager/spec/features/view_bookmarks_spec.rb": [
+      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/view_bookmarks_spec.rb": [
         1,
         1,
         1,
@@ -51,6 +46,6 @@
         null
       ]
     },
-    "timestamp": 1553533754
+    "timestamp": 1553535404
   }
 }
