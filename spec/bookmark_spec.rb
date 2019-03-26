@@ -1,12 +1,10 @@
 require "bookmark"
 
 describe Bookmark do
-  describe "#view_all" do
-    it "returns all bookmarks" do
-      bookmarks = Bookmark.view_all
-
-      expect(bookmarks).to include("www.google.com")
-      expect(bookmarks).to include("www.facebook.com")
+  describe "#all" do
+    it "returns all urls from bookmarks database table" do
+      bookmarks = Bookmark.all
+      expect(bookmarks).to include("http://www.makersacademy.com")
     end
   end
 end
