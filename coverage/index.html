@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-27T16:25:24+00:00">2019-03-27T16:25:24+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-27T16:53:54+00:00">2019-03-27T16:53:54+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>38</b> lines covered</span> and
+    <b>35</b> relevant lines. 
+    <span class="green"><b>35</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,9 +53,9 @@
       <tr>
         <td class="strong"><a href="#a5913e5edabfd46dba77b19250e7b2b845c72c9a" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
-        <td>16</td>
-        <td>16</td>
+        <td>28</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#ca75df53737da025f66760ea444ebd46227754c8" class="src_link" title="spec/features/viewing_bookmarks_spec.rb">spec/features/viewing_bookmarks_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>10</td>
-        <td>10</td>
+        <td>18</td>
+        <td>6</td>
+        <td>6</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -111,8 +111,8 @@
     <h3>spec/bookmark_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -141,7 +141,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;#all&quot; do</code>
+          <code class="ruby">  describe &quot;.all&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -255,7 +255,7 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      Bookmark.create(url: &#39;http://www.testbookmark.com&#39;)</code>
+          <code class="ruby">      Bookmark.create(url: &#39;http://www.testbookmark.com&#39;, title: &#39;Test Bookmark&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
@@ -264,19 +264,25 @@
           <code class="ruby">      expect(Bookmark.all).to include &#39;http://www.testbookmark.com&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(Bookmark.all).to include &#39;Test Bookmark&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">  end </code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -468,8 +474,8 @@
     <h3>spec/features/viewing_bookmarks_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -516,19 +522,19 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.makersacademy.com&quot;)</code>
+          <code class="ruby">    Bookmark.create(url: &quot;http://www.makersacademy.com&quot;, title: &quot;Makers Academy&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.destroyallsoftware.com&quot;)</code>
+          
+          <code class="ruby">    # Bookmark.create(url: &quot;http://www.destroyallsoftware.com&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="9">
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.google.com&quot;)</code>
+          
+          <code class="ruby">    # Bookmark.create(url: &quot;http://www.google.com&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -549,31 +555,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">    expect(page).to have_content &quot;http://www.makersacademy.com&quot;</code>
+          
+          <code class="ruby">    # expect(page).to have_content &quot;http://www.makersacademy.com&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_content &quot;http://www.destroyallsoftware.com&quot;</code>
+          <code class="ruby">    expect(page).to have_content &quot;Makers Academy&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">    expect(page).to have_content &quot;http://www.google.com&quot;</code>
+          
+          <code class="ruby">    # expect(page).to have_content &quot;http://www.destroyallsoftware.com&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    # expect(page).to have_content &quot;http://www.google.com&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">end</code>
