@@ -66,10 +66,13 @@ CREATE TABLE bookmarks (
 );
 
 ```
-
-As a web user
-So that I can quickly access my favourite webpages
+```
+User story: Add bookmarks
+-------------------------
+As a web user,
+So that I can quickly access my favourite webpages,
 I would like to be able to add web addresses to my 'bookmarks' 
+```
 
 
 

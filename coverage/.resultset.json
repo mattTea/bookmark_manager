@@ -21,9 +21,20 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/add_bookmark_spec.rb": [
+        null,
+        null,
+        null,
+        null,
         1,
         null,
         1,
@@ -51,7 +62,6 @@
         null,
         1,
         1,
-        1,
         null,
         null,
         1,
@@ -67,6 +77,6 @@
         null
       ]
     },
-    "timestamp": 1553701625
+    "timestamp": 1553703924
   }
 }
