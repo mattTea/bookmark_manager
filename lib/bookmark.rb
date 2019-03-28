@@ -1,6 +1,14 @@
 require 'pg'
 
 class Bookmark
+  attr_reader :id, :title, :url
+
+  def initialize(id:, title:, url:)
+    @id = id
+    @title = title
+    @url = url
+  end
+  
   def self.create(url:, title:)
     if ENV['RACK_ENV'] == 'test'
       connection = PG.connect( dbname: 'bookmark_manager_test' )
@@ -21,12 +29,7 @@ class Bookmark
     
     result = connection.exec( "SELECT * FROM bookmarks;" )
     list = result.map do |bookmark|
-      {title: bookmark['title'], url: bookmark['url']}
+      Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
-    # p list
-    # list.join("\n")
-
-    # You may want to update the Bookmark.all method to return instances of the Bookmark class instead of strings.
-    # The instance should wrap and expose the attributes id, title and url.
   end
 end
