@@ -24,8 +24,8 @@ Filter bookmarks by tag
 Users manage their bookmarks
 
 ```
-User story
-----------
+User story: View bookmarks
+--------------------------
 As a user,
 So that I can quickly access websites I regularly visit,
 I want to view a list of my bookmarks.
@@ -73,7 +73,4 @@ As a web user,
 So that I can quickly access my favourite webpages,
 I would like to be able to add web addresses to my 'bookmarks' 
 ```
-
-
-
 

@@ -9,6 +9,7 @@ class BookmarkManager < Sinatra::Base
 
   get "/bookmarks" do
     @bookmarks = Bookmark.all
+    # show only the bookmark title here
     erb :"bookmarks/index"
   end
 

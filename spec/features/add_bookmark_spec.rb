@@ -8,7 +8,8 @@ feature 'Add bookmark' do
   scenario 'a user saves a url to the list' do
     visit ('/bookmarks')
     fill_in 'url', :with => 'http://www.asda.co.uk'
+    fill_in 'title', :with => 'Asda'
     find_button('add').click
-    expect(page).to have_content('http://www.asda.co.uk')
+    expect(page).to have_content('Asda')
   end
 end
