@@ -74,3 +74,11 @@ So that I can quickly access my favourite webpages,
 I would like to be able to add web addresses to my 'bookmarks' 
 ```
 
+```
+User story: View bookmark titles as links
+-----------------------------------------
+As a user,
+so that I can comfortably access my favourite web pages,
+I wish to view only the titles,
+and be able to click them to be directed to that page. 
+```

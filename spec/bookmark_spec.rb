@@ -12,16 +12,16 @@ describe Bookmark do
 
       bookmarks = Bookmark.all
 
-      expect(bookmarks).to include "Makers Academy"
-      expect(bookmarks).to include "Destroy All Software"
-      expect(bookmarks).to include "Google"
+      expect(bookmarks[0][:title]).to include "Makers Academy"
+      expect(bookmarks[1][:title]).to include "Destroy All Software"
+      expect(bookmarks[2][:title]).to include "Google"
     end
   end
 
   describe '.create' do
     it 'creates a new bookmark' do
       Bookmark.create(url: "http://www.testbookmark.com", title: "Test Bookmark")
-      expect(Bookmark.all).to include "Test Bookmark"
+      expect(Bookmark.all[0][:title]).to include "Test Bookmark"
     end
   end 
 end

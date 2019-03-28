@@ -9,7 +9,13 @@ class BookmarkManager < Sinatra::Base
 
   get "/bookmarks" do
     @bookmarks = Bookmark.all
+    # p @bookmarks
     # show only the bookmark title here
+    # Bookmarks = [
+      # {:title=>"Makers Academy", :url=>"http://www.makersacademy.com"},
+      # {:title=>"Destroy All Software", :url=>"http://www.destroyallsoftware.com"},
+      # {:title=>"Google", :url=>"http://www.google.com"}
+    # ]
     erb :"bookmarks/index"
   end
 

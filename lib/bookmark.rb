@@ -20,8 +20,13 @@ class Bookmark
     end
     
     result = connection.exec( "SELECT * FROM bookmarks;" )
-    list = result.map { |bookmark| bookmark['title'] }
-    list.join("\n")
-  end
+    list = result.map do |bookmark|
+      {title: bookmark['title'], url: bookmark['url']}
+    end
+    # p list
+    # list.join("\n")
 
+    # You may want to update the Bookmark.all method to return instances of the Bookmark class instead of strings.
+    # The instance should wrap and expose the attributes id, title and url.
+  end
 end
