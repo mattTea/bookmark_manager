@@ -82,3 +82,34 @@ so that I can comfortably access my favourite web pages,
 I wish to view only the titles,
 and be able to click them to be directed to that page. 
 ```
+
+#### Step 12 - Delete bookmark
+
+N.B. Sinatra only allows `GET` or `POST` methods (in `app.rb`)
+- These need to be overridden for other REST methods
+
+To keep your routes RESTful, make use of Sinatra's [named parameters](http://sinatrarb.com/intro.html) - you'll need to enable [method_override](http://sinatrarb.com/configuration.html) to use this feature...
+
+```
+:method_override - enable/disable the POST _method hack
+-------------------------------------------------------
+Boolean specifying whether the HTTP POST _method parameter hack should be enabled. When true, the actual HTTP request method is overridden by the value of the _method parameter included in the POST body. The _method hack is used to make POST requests look like other request methods (e.g., PUT, DELETE) and is typically only needed in shitty environments – like HTML form submission – that do not support the full range of HTTP methods.
+
+The POST _method hack is implemented by inserting the Rack::MethodOverride component into the middleware pipeline.
+```
+
+**TODOs for this step...**
+
+1. User story
+2. Feature test for `delete`
+3. Unit test for method in Bookmark?
+4. 
+
+```
+User story: Delete bookmarks
+----------------------------
+As a user who likes tidy lists,
+so that I can manage my list of favourite websites,
+I want to be able to delete bookmarks I no longer use.
+```
+

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-29T11:59:02+00:00">2019-03-29T11:59:02+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-03-29T16:27:08+00:00">2019-03-29T16:27:08+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>57</b> relevant lines. 
-    <span class="green"><b>57</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>67</b> relevant lines. 
+    <span class="green"><b>67</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,9 +53,9 @@
       <tr>
         <td class="strong"><a href="#a5913e5edabfd46dba77b19250e7b2b845c72c9a" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>37</td>
-        <td>25</td>
-        <td>25</td>
+        <td>44</td>
+        <td>27</td>
+        <td>27</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -81,6 +81,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#63f18b38e3f9f3d0728fb052c5bb1321647e599d" class="src_link" title="spec/features/deleting_bookmark_spec.rb">spec/features/deleting_bookmark_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>19</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#608f374f7a27c035216a4ae1f31da07031c42a43" class="src_link" title="spec/features/homepage_spec.rb">spec/features/homepage_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>9</td>
@@ -93,7 +103,7 @@
       <tr>
         <td class="strong"><a href="#ca75df53737da025f66760ea444ebd46227754c8" class="src_link" title="spec/features/viewing_bookmarks_spec.rb">spec/features/viewing_bookmarks_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
+        <td>32</td>
         <td>14</td>
         <td>14</td>
         <td>0</td>
@@ -121,8 +131,8 @@
     <h3>spec/bookmark_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>27</b> relevant lines. 
+      <span class="green"><b>27</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -166,10 +176,10 @@
           <code class="ruby">    it &quot;returns all urls from bookmarks database table&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">      connection = PG.connect(dbname: &#39;bookmark_manager_test&#39;)</code>
+          
+          <code class="ruby">      # connection = PG.connect(dbname: &quot;bookmark_manager_test&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -223,130 +233,172 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">      p bookmarks</code>
+          <code class="ruby">      expect(bookmarks.length).to eq 3</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">      p bookmark</code>
+          <code class="ruby">      expect(bookmarks.first).to be_a Bookmark</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bookmarks.length).to eq 3</code>
+          <code class="ruby">      expect(bookmarks.first.id).to eq bookmark.id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bookmarks.first).to be_a Bookmark</code>
+          <code class="ruby">      expect(bookmarks.first.title).to eq &quot;Makers Academy&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bookmarks.first.id).to eq bookmark.id</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(bookmarks.first.title).to eq &quot;Makers Academy&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
           <code class="ruby">      expect(bookmarks.first.url).to eq &quot;http://www.makersacademy.com&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;.create&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;creates a new bookmark&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;.create&#39; do</code>
+          <code class="ruby">      bookmark = Bookmark.create(url: &quot;http://www.testbookmark.com&quot;, title: &quot;Test Bookmark&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;creates a new bookmark&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      bookmark = Bookmark.create(url: &quot;http://www.testbookmark.com&quot;, title: &quot;Test Bookmark&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
-          
           <code class="ruby">      persisted_data = persisted_data(id: bookmark.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(bookmark).to be_a Bookmark</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(bookmark.id).to eq persisted_data[&#39;id&#39;]</code>
+          <code class="ruby">      expect(bookmark.id).to eq persisted_data[&quot;id&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(bookmark.title).to eq &quot;Test Bookmark&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(bookmark.url).to eq &quot;http://www.testbookmark.com&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  end </code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;.delete&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;deletes a bookmark&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      bookmark = Bookmark.create(url: &quot;http://www.testbookmark-delete.com&quot;, title: &quot;Test Bookmark Delete&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">      </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      Bookmark.delete(id: bookmark.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(Bookmark.all.length).to eq 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">end</code>
@@ -447,7 +499,7 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby"># I would like to be able to add web addresses to my &#39;bookmarks&#39; </code>
+          <code class="ruby"># I would like to be able to add web addresses to my &quot;bookmarks&quot; </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -459,7 +511,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">require_relative &#39;../../app.rb&#39;</code>
+          <code class="ruby">require_relative &quot;../../app.rb&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -471,43 +523,43 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">feature &#39;Add bookmark&#39; do</code>
+          <code class="ruby">feature &quot;Add bookmark&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  scenario &#39;a user can add a bookmark to Bookmark Manager&#39; do</code>
+          <code class="ruby">  scenario &quot;a user can add a bookmark to Bookmark Manager&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit (&#39;/bookmarks/new&#39;)</code>
+          <code class="ruby">    visit (&quot;/bookmarks/new&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;url&#39;, :with =&gt; &#39;http://www.asda.co.uk&#39;</code>
+          <code class="ruby">    fill_in &quot;url&quot;, :with =&gt; &quot;http://www.asda.co.uk&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
-          <code class="ruby">    fill_in &#39;title&#39;, :with =&gt; &#39;Asda&#39;</code>
+          <code class="ruby">    fill_in &quot;title&quot;, :with =&gt; &quot;Asda&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_button(&#39;add&#39;)</code>
+          <code class="ruby">    click_button(&quot;add&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_link(&#39;Asda&#39;, href: &#39;http://www.asda.co.uk&#39;)</code>
+          <code class="ruby">    expect(page).to have_link(&quot;Asda&quot;, href: &quot;http://www.asda.co.uk&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -517,6 +569,139 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="63f18b38e3f9f3d0728fb052c5bb1321647e599d">
+  <div class="header">
+    <h3>spec/features/deleting_bookmark_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># As a user who likes tidy lists,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"># so that I can manage my list of favourite websites,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># I want to be able to delete bookmarks I no longer use.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &quot;../../app.rb&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;Delete bookmark&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &quot;a user can delete a bookmark from Bookmark Manager&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    # Add test data</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    bookmark = Bookmark.create(url: &quot;http://blog.matttea.com&quot;, title: &quot;mattTea Blog&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/bookmarks&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_link(&quot;mattTea Blog&quot;, href: &quot;http://blog.matttea.com&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on(bookmark.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).not_to have_link(&quot;mattTea Blog&quot;, href: &quot;http://blog.matttea.com&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
@@ -614,118 +799,118 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;pg&#39;</code>
+          
+          <code class="ruby"># As a user,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
           
           
+          <code class="ruby"># So that I can quickly access websites I regularly visit,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"># I want to view a list of my bookmarks.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">feature &quot;Viewing bookmarks&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  scenario &quot;user can see list of bookmarks&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># As a user,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">    # Add test data</code>
+          <code class="ruby"># so that I can comfortably access my favourite web pages,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.makersacademy.com&quot;, title: &quot;Makers Academy&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.destroyallsoftware.com&quot;, title: &quot;Destroy All Software&quot;)</code>
+          <code class="ruby"># I wish to view only the titles,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">    Bookmark.create(url: &quot;http://www.google.com&quot;, title: &quot;Google&quot;)</code>
+          
+          <code class="ruby"># and be able to click them to be directed to that page. </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit(&quot;/bookmarks&quot;)</code>
+          <code class="ruby">require &#39;pg&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">feature &quot;Viewing bookmarks&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_link(&quot;Makers Academy&quot;, href: &quot;http://www.makersacademy.com&quot;)</code>
+          <code class="ruby">  scenario &quot;user can see list of bookmarks&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to have_link(&quot;Destroy All Software&quot;, href: &quot;http://www.destroyallsoftware.com&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(page).to have_link(&quot;Google&quot;, href: &quot;http://www.google.com&quot;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  scenario &quot;user sees only the title of saved bookmarks&quot; do</code>
+          
+          <code class="ruby">    # Add test data</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    Bookmark.create(url: &quot;http://www.makersacademy.com&quot;, title: &quot;Makers Academy&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    Bookmark.create(url: &quot;http://www.destroyallsoftware.com&quot;, title: &quot;Destroy All Software&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    Bookmark.create(url: &quot;http://www.google.com&quot;, title: &quot;Google&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -734,19 +919,73 @@
           <code class="ruby">    visit(&quot;/bookmarks&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="21">
           
-          <code class="ruby">    expect(page).not_to have_content &quot;http://www.makersacademy.com&quot;</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_link(&quot;Makers Academy&quot;, href: &quot;http://www.makersacademy.com&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_link(&quot;Destroy All Software&quot;, href: &quot;http://www.destroyallsoftware.com&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_link(&quot;Google&quot;, href: &quot;http://www.google.com&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  scenario &quot;user sees only the title of saved bookmarks&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    Bookmark.create(url: &quot;http://www.makersacademy.com&quot;, title: &quot;Makers Academy&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit(&quot;/bookmarks&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).not_to have_content &quot;http://www.makersacademy.com&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">end</code>

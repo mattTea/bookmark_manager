@@ -1,3 +1,12 @@
+# As a user,
+# So that I can quickly access websites I regularly visit,
+# I want to view a list of my bookmarks.
+
+# As a user,
+# so that I can comfortably access my favourite web pages,
+# I wish to view only the titles,
+# and be able to click them to be directed to that page. 
+
 require 'pg'
 
 feature "Viewing bookmarks" do
