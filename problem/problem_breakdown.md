@@ -113,3 +113,13 @@ so that I can manage my list of favourite websites,
 I want to be able to delete bookmarks I no longer use.
 ```
 
+
+### Step 13 - Update bookmark
+
+```
+User story: Update bookmarks
+----------------------------
+As a user,
+so that I can keep my bookmarks accurate and up-to-date,
+I want to be able to update bookmark details.
+```
