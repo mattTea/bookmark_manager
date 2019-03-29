@@ -4,7 +4,6 @@ require "database_helpers"
 describe Bookmark do
   describe ".all" do
     it "returns all urls from bookmarks database table" do
-      # connection = PG.connect(dbname: "bookmark_manager_test")
 
       # Add test data
       bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
@@ -39,6 +38,14 @@ describe Bookmark do
       
       Bookmark.delete(id: bookmark.id)
       expect(Bookmark.all.length).to eq 0
+    end
+  end
+
+  describe ".find_by_id" do
+    it "finds a specific bookmark" do
+      bookmark = Bookmark.create(url: "http://www.testbookmark-delete.com", title: "Test Bookmark Delete")
+      
+      expect(Bookmark.find_by_id(id: bookmark.id)).to be_a Bookmark
     end
   end
 end

@@ -13,6 +13,6 @@ describe "Update bookmark" do
     expect(page).to have_link("mattTea Blog", href: "http://blog.matttea.com")
 
     click_on("update-#{bookmark.id}")
-    expect(current_path).to eq "/bookmarks/#{bookmark.id}/update"
+    expect(current_path).to eq "/bookmarks/#{bookmark.id}"
   end
 end
