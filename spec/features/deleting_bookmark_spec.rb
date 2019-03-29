@@ -4,7 +4,7 @@
 
 require_relative "../../app.rb"
 
-describe "Delete bookmark" do
+describe "Deleting bookmarks" do
   scenario "a user can delete a bookmark from Bookmark Manager" do
 
     # Add test data

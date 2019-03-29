@@ -49,7 +49,18 @@ class Bookmark
     else
       connection = PG.connect( dbname: 'bookmark_manager' )
     end
-    result = connection.exec("SELECT FROM bookmarks WHERE id = '#{id}'")
+    result = connection.exec("SELECT * FROM bookmarks WHERE id = '#{id}';")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+  end
+
+  def self.update(id:, url:, title:)
+    if ENV['RACK_ENV'] == 'test'
+      connection = PG.connect( dbname: 'bookmark_manager_test' )
+    else
+      connection = PG.connect( dbname: 'bookmark_manager' )
+    end
+
+    result = connection.exec("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = '#{id}'")
+    Bookmark.find_by_id(id: id)
   end
 end

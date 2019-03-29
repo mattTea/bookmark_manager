@@ -1,0 +1,7 @@
+<h3>Update Bookmark: <%= @bookmark.title %></h3>
+
+<form action="/bookmarks/<%= @bookmark.id %>" method="post">
+  Title: <input type="text" name="title" value="<%= @bookmark.title %>">
+  url: <input type="text" name="url" value="<%= @bookmark.url %>">
+  <input type="submit" value="Update">
+</form>

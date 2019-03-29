@@ -48,4 +48,13 @@ describe Bookmark do
       expect(Bookmark.find_by_id(id: bookmark.id)).to be_a Bookmark
     end
   end
+
+  describe ".update" do
+    it "updates a bookmark" do
+      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
+      Bookmark.update(id: bookmark.id, url: bookmark.url, title: "Updated Makers Academy")
+      
+      expect(Bookmark.find_by_id(id: bookmark.id).title).to eq "Updated Makers Academy"
+    end
+  end
 end
