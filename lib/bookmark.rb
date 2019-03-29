@@ -16,8 +16,9 @@ class Bookmark
       connection = PG.connect( dbname: 'bookmark_manager' )
     end
 
-    sql = "INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}')"
-    connection.exec(sql)
+    result = connection.exec("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;")
+    # to return newly created Bookmark, wrapped in a bookmark object...
+    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   def self.all

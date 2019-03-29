@@ -3,24 +3,7 @@
     "coverage": {
       "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/bookmark_spec.rb": [
         1,
-        null,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         1,
@@ -28,6 +11,42 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/database_helpers.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/mattthompson/Documents/dev-projects/Makers/Projects/Week_4/bookmark_manager/spec/features/add_bookmark_spec.rb": [
@@ -84,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1553807029
+    "timestamp": 1553860742
   }
 }

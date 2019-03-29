@@ -5,11 +5,11 @@
 require_relative '../../app.rb'
 
 feature 'Add bookmark' do
-  scenario 'a user saves a url to the list' do
-    visit ('/bookmarks')
+  scenario 'a user can add a bookmark to Bookmark Manager' do
+    visit ('/bookmarks/new')
     fill_in 'url', :with => 'http://www.asda.co.uk'
     fill_in 'title', :with => 'Asda'
-    find_button('add').click
-    expect(page).to have_content('Asda')
+    click_button('add')
+    expect(page).to have_link('Asda', href: 'http://www.asda.co.uk')
   end
 end
